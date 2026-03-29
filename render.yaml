@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hyunlab-api
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    disk:
+      name: recipe-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /data
+      - key: NODE_ENV
+        value: production
