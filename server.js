@@ -8,8 +8,8 @@ const fs = require('fs');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ── 데이터 저장 경로 (Render Disk: /data)
-const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
+// ── 데이터 저장 경로 (Render Disk: /data 마운트)
+const DATA_DIR = process.env.DATA_DIR || '/data';
 const PHOTOS_DIR = path.join(DATA_DIR, 'photos');
 const REVIEWS_DIR = path.join(DATA_DIR, 'reviews');
 
